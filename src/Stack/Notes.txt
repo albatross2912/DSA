@@ -1,0 +1,16 @@
+Stack
+------
+1. It is a linear DS
+2. It follows last in first Out Principle [LIFO]
+3. Operations :-
+    PUSH -> Insert an element in the Stack
+    POP -> Remove/Delete an elements from a stack
+    PEEK -> TOp most value in the stack
+4. ALL Operations of stack DS works on the basis of TOP.
+5. Conditions
+    a. TOP == -1, stack is empty
+    b. TOP == 0, element in the stack
+    c. TOP == SIZE -1, stack is full
+    d. TOP == Size, stack is Overflow
+6.
+
