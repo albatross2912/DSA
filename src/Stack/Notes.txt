@@ -5,12 +5,40 @@ Stack
 3. Operations :-
     PUSH -> Insert an element in the Stack
     POP -> Remove/Delete an elements from a stack
-    PEEK -> TOp most value in the stack
+    PEEK -> Top most value in the stack
 4. ALL Operations of stack DS works on the basis of TOP.
 5. Conditions
     a. TOP == -1, stack is empty
     b. TOP == 0, element in the stack
     c. TOP == SIZE -1, stack is full
     d. TOP == Size, stack is Overflow
-6.
+
+6. Example :-
+    program1
+
+7. Stack Class
+    a. Stack class is a child class of vector class.
+    b. Stack class is a synchronized class.
+    c. Stack class also works on the basis of indexing.
+    d. Stack class is a generic class.
+    e. This generic class use only wrapper class.
+    f. stack class stored in java.utill
+    Wrapper classes
+    ---------------
+        Data type                      Wrapper-class-name
+        --------------------------------------------------
+        byte                               Byte
+        short                              Short
+        int                                Integer
+        long                               Long
+        float                              Float
+        double                             Double
+        char                               Character
+        boolean                            Boolean
+
+8. Example
+        Program2
+
+
+
 
