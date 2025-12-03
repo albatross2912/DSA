@@ -28,7 +28,8 @@ public class Program1 {
 
     }
 
-    void printStack() {
+    void printStack()
+    {
         for (int i = 0; i < top; i++) {
             System.out.print(stack[i] + "\t");
         }
@@ -46,7 +47,7 @@ public class Program1 {
         }
     }
 
-    int peak()
+    int peek()
     {
 
         if(top == -1)
@@ -73,6 +74,6 @@ public class Program1 {
         p1.printStack();
         p1.pop();
         p1.printStack();
-        System.out.println("The value of stack is "+p1.peak());
+        System.out.println("The value of stack is "+p1.peek());
     }
 }
