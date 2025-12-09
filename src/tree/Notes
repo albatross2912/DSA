@@ -1,0 +1,5 @@
+6. Tree traversing
+     Pre-order tree traversing : Root -> Left -> Right
+     In-order tree traversing : Left -> Root -> Right
+     Post-order tree traveling : Left -> Right -> Root
+

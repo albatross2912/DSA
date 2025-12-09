@@ -1,0 +1,87 @@
+LinkedList (single LL)
+----------
+1. LL is similar to an Array.
+2. LL elements access in linear way.
+3. LL elements are not stored in contigious memory allocation (non-linear way).
+4. Each element of LL is called a Node.
+5. Each node of LL contains:
+    |- Data - It holds the value of the node.
+    |- Next - It holds the address/reference of the next node.
+6. Last node of the LL contains NULL in the next part of the node.
+7. Last node aka TAIL node.
+8. Starting node of the LL is called HEAD node.
+9. if the value of HEAD is equal to NULL then we can say that, LL is empty.
+
+Examples:
+    Program1
+        Operations
+            |- insertFirst
+            |- insertLast
+            |- deleteFirst
+            |- deleteLast
+            |- SearchElement
+            |- HW: Count No of element of the LL
+            |- HW: Count No of unique element of the LL (ignore duplicates)
+            |- HW: Check the LL elements are in palindromic or not
+            |- HW: Copy LL elements into another LL in InsertLast manner.
+            |- HW: find the middle element of the LL.
+            |- HW: insert an element at the middle of the LL.
+
+
+Circular LinkedList (single LL)
+-------------------
+-> Head=Tail == null, CLL is empty
+    Example:
+        Program2.java
+                Operations
+                        |- insertFirst
+                        |- insertLast
+                        |- deleteFirst
+                        |- deleteLast
+                        |- HW: SearchElement
+                        |- Count No of element of the LL
+                        |- HW: Count No of unique element of the LL (ignore duplicates)
+                        |- HW: Check the LL elements are in palindromic or not
+                        |- HW: Copy LL elements into another LL in InsertLast manner.
+                        |- HW: find the middle element of the LL.
+                        |- HW: insert an element at the middle of the LL.
+
+
+
+ LinkedList class
+ ----------------------
+ 1. LinkedList class is an implementation class of list interface
+ 2. LinkedList class uses doubly LinkedList concept for data management
+ 3. LinkedList class is a member of java.util package
+ 4. LinkedList class is a non synchronized class(not a thread-safe class)
+ 5. it allows duplicate values
+ 6. methods:-
+              public void addFirst(E);
+              public void addLast(E);
+              public int size();
+              public E get(int);
+              public void clear();
+
+Program5 :-
+
+               public boolean remove(java.lang.Object);
+               public E removefirst();
+               public E removeLast();
+
+Progarm6 :-
+
+public E set(int, E);
+
+
+Program7 :-
+              public boolean contains(java.lang.Object);
+
+              public boolean add(E);
+              public boolean remove(java.lang.Object);
+              public boolean addAll(java.util.Collection<? extends E>);
+              public boolean addAll(int, java.util.Collection<? extends E>);
+
+              public E remove(int);
+              public java.util.ListIterator<E> listIterator(int);
+              public java.util.Iterator<E> descendingIterator();
+              public java.lang.Object clone()
