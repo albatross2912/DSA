@@ -45,13 +45,14 @@ public class Program1 {
         p1.root.left.left = new Node(40);
         p1.root.left.right = new Node(50);
         p1.root.right.left = new Node(60);
+
         System.out.println( "Pre-order :" );
         p1.preOrder(p1.root);
         System.out.println();
         System.out.println( "In-order :" );
         p1.InOrder(p1.root);
         System.out.println();
-        System.out.println( "Post-order :" );
+        System.out.println( "Post-order :");
         p1.postOrder(p1.root);
 
     }
