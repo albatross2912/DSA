@@ -1,6 +1,6 @@
 package tree;
 
-public class Program2 {
+public class Program3 {
 
     Node root;
 
@@ -15,25 +15,26 @@ public class Program2 {
         }
 
     }
-    int getDepth(Node root)
+
+    static int count  = 0;
+
+    private void countNodes(Node root)
     {
+        if (root != null)
+        {
+            count++;
+            countNodes(root.left);
+            countNodes(root.right);
 
-        if (root == null)
+        }
 
-            return 0;
 
-        int leftDepth = getDepth(root.left);
-        int rightDepth = getDepth(root.right);
-        if(leftDepth>rightDepth)
-            return leftDepth+1;
-        else
-            return rightDepth+1;
+
     }
-
 
     public static void main(String[] args) {
 
-        Program2 p1 = new Program2();
+        Program3 p1 = new Program3();
         p1.root = new Node(10);
         p1.root.left = new Node(20);
         p1.root.right = new Node(30);
@@ -41,10 +42,13 @@ public class Program2 {
         p1.root.left.right = new Node(50);
         p1.root.right.left = new Node(60);
 
-        System.out.println( "Pre-order :" );
+        System.out.println( "Pre-order: " );
         p1.preOrder(p1.root);
         System.out.println();
-        System.out.println("Depth of tree: "+p1.getDepth(p1.root));
+        p1.countNodes(p1.root);
+        System.out.println("Total Nodes: " + count);
+
+
 
 
 

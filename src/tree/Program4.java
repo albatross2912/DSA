@@ -1,6 +1,6 @@
 package tree;
 
-public class Program2 {
+public class Program4 {
 
     Node root;
 
@@ -15,25 +15,26 @@ public class Program2 {
         }
 
     }
-    int getDepth(Node root)
-    {
 
+    private boolean checkFullBT(Node root)
+    {
         if (root == null)
 
-            return 0;
+            return true;
 
-        int leftDepth = getDepth(root.left);
-        int rightDepth = getDepth(root.right);
-        if(leftDepth>rightDepth)
-            return leftDepth+1;
-        else
-            return rightDepth+1;
+        else if (root.left == null && root.right == null)
+            return true;
+        else if (root.left != null && root.right != null)
+          return(checkFullBT(root.left) && checkFullBT(root.right));
+            return false;
+
+
     }
 
 
     public static void main(String[] args) {
 
-        Program2 p1 = new Program2();
+        Program4 p1 = new Program4();
         p1.root = new Node(10);
         p1.root.left = new Node(20);
         p1.root.right = new Node(30);
@@ -41,10 +42,14 @@ public class Program2 {
         p1.root.left.right = new Node(50);
         p1.root.right.left = new Node(60);
 
-        System.out.println( "Pre-order :" );
+        System.out.println( "Pre-order: " );
         p1.preOrder(p1.root);
         System.out.println();
-        System.out.println("Depth of tree: "+p1.getDepth(p1.root));
+
+        System.out.println( "Is Tree FullBT: "+p1.checkFullBT(p1.root) );
+
+
+
 
 
 
