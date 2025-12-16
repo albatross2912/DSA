@@ -36,6 +36,12 @@ tree ds
      |- In-order tree traversing : Left -> Root -> Right
      |- Post-order tree traveling : Left -> Right -> Root
 
+                        10
+                     /      \
+                   20        30
+                 /   \      /
+                40   50    60
+
 Examples:-
 
       Program1 :- the creation of transversion.
@@ -45,4 +51,14 @@ Examples:-
       Program5 :- Check the binary tree is the complete binary tree or not.
       program6 :- Create the mirror image of tree.
 
+Binary Search tree:-
+----------------------
+
+- Binary Search tree is a data structure that allows to maintain ia sorted tree.
+- All the nodes of left sub-tree is less then the root Node.
+- All the nodes of Right sub-tree is more then the root Node.
+
+      Program7:-
+          |- deletion
+          |- insertion
 

@@ -1,0 +1,23 @@
+Graph DS :-
+
+
+9. Graph traversing technique
+   ---------------------------
+       |- Depth first search [Stack
+       |- Breadth first search [Queue]
+
+10. Spanning Tree
+    -------------
+    |-  A ST is a sub-graph of undirected connected graph.
+    |- It includes all the vertices with minimum number of Edges.
+    |- is any vertex is missed, then oit not a ST.
+    |- minimum ST (MST) ***
+       |- It used to find the ST from the weight graph by check the minimum weight of the edge.
+       |- To ensure, that no cycle in the minimum spanning tree.
+       |- There are two Algorithm for find the MST.
+            |- Prim's Algorithm
+                |- Program5
+
+            |- Kruskal Algorithm
+                |- Program6
+
