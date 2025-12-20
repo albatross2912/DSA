@@ -1,11 +1,11 @@
-package Graph;
+package graph;
 
-public class Program1 {
+public class Program2 {
 
     int[][] adjMatrix;
     int numVertex;
 
-    public Program1(int numVertex) {
+    public Program2(int numVertex) {
         this.numVertex = numVertex;
         adjMatrix = new int[numVertex][numVertex];
     }
@@ -13,7 +13,6 @@ public class Program1 {
     void addEdge(int s, int d)
     {
         adjMatrix[s][d] = 1;
-        adjMatrix[d][s] = 1;
     }
 
     void printMatrix()
@@ -28,12 +27,12 @@ public class Program1 {
         }
     }
     public static void main(String[] args) {
-        Program1 p1 = new Program1(5);
-        p1.addEdge(0,1);
-        p1.addEdge(0,3);
+        Program2 p1 = new Program2(5);
+        p1.addEdge(1,0);
         p1.addEdge(0,2);
-        p1.addEdge(2,3);
-        p1.addEdge(2,4);
+        p1.addEdge(0,3);
+        p1.addEdge(3,2);
+        p1.addEdge(4,3);
         p1.printMatrix();
 
     }

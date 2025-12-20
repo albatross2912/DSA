@@ -1,4 +1,4 @@
-package linkedlist;
+package linkedList;
 
 class Node
 {
@@ -24,12 +24,12 @@ public class Program1 {
         n.data = value;
         n.next = null;
 
-        if(head == null) {
+        if(head==null) {
             head = n;
         }
         else {
             Node temp = head;
-            while(temp.next != null)
+            while(temp.next !=null)
             {
                 temp = temp.next;
             }
@@ -37,41 +37,45 @@ public class Program1 {
         }
     }
 
+
+
     void deleteFirst()
     {
-        if(head == null)
-            System.out.println("LL is Empty");
+        if(head==null)
+        {
+            System.out.print("LL is Empty");
+        }
         else
+        {
             head = head.next;
+        }
     }
+
+    // Head = [ 20 | [ 10 | null ] ]
 
     void deleteLast()
     {
-        if(head == null)
+        if(head==null)
         {
-            System.out.println("LL is Empty");
-        }
-        else if(head.next == null)
-        {
-            head = null;
+            System.out.print("LL is Empty");
         }
         else
         {
             Node temp = head;
-            while(temp.next.next != null)
+            while(temp.next.next!=null)
             {
                 temp = temp.next;
             }
-            temp.next = null;
+            temp.next=null;
         }
     }
 
     void printList()
     {
         Node temp = head;
-        while(temp != null)
+        while(temp!=null)
         {
-            System.out.print(temp.data + "\t");
+            System.out.print(temp.data+"\t"); // 30 20 10
             temp = temp.next;
         }
         System.out.println();
@@ -79,115 +83,94 @@ public class Program1 {
 
     int searchElement(int value)
     {
-        int pos = 1;
+        int result = -1;
+        int i = 1;
         Node temp = head;
-
-        while(temp != null)
+        while(temp!=null)
         {
-            if(temp.data == value)
-                return pos;
-
+            if(temp.data==value)
+            {
+                return i;
+            }
             temp = temp.next;
-            pos++;
+            i++;
         }
         return -1;
     }
 
-    int intCountNode()
+    int countNode()
     {
         int count = 0;
         Node temp = head;
-
-        while(temp != null)
+        while(temp!=null)
         {
             count++;
             temp = temp.next;
         }
-        return count;
+        return  count;
     }
 
-    // Remove duplicate elements (unsorted list)
-    void removeDuplicate()
+    void removeDuplicates()
     {
-        Node curr = head;
-
-        while(curr != null)
+        Node temp1 = head;
+        while(temp1!=null)
         {
-            Node temp = curr;
-            while(temp.next != null)
-            {
-                if(temp.next.data == curr.data)
+            Node temp2 = temp1;
+            while (temp2.next!=null)
+            {       // 10  ==   10
+                if(temp2.next.data == temp1.data)
                 {
-                    temp.next = temp.next.next;  // delete duplicate node
+                    temp2.next = temp2.next.next;
                 }
                 else
                 {
-                    temp = temp.next;
+                    temp2 = temp2.next;
                 }
             }
-            curr = curr.next;
+            temp1 = temp1.next;
         }
     }
 
-    // Find middle node (returns data)
     int findMiddleNode()
     {
-        if (head == null)
-            return -1;
-
         Node slow = head;
         Node fast = head;
 
-        while(fast != null && fast.next != null)
+        while(fast!=null && fast.next!=null)
         {
             slow = slow.next;
             fast = fast.next.next;
         }
-        return slow.data;   // middle node value
+
+        return slow.data;
     }
 
-    // Insert in the middle
     void insertMiddle(int value)
     {
         Node n = new Node();
         n.data = value;
 
-        if(head == null)
-        {
-            head = n;
-            return;
-        }
-
         Node slow = head;
         Node fast = head;
 
-        while(fast != null && fast.next != null)
+        while(fast!=null && fast.next!=null)
         {
             slow = slow.next;
             fast = fast.next.next;
         }
-
         n.next = slow.next;
         slow.next = n;
     }
 
     public static void main(String[] args) {
-
         Program1 p1 = new Program1();
-
         p1.insertFirst(10);
         p1.insertFirst(20);
         p1.insertFirst(30);
         p1.insertLast(40);
         p1.insertFirst(50);
-
         p1.printList();
-
         p1.insertMiddle(60);
-
         p1.printList();
-
-        System.out.println("Middle Node = " + p1.findMiddleNode());
-        System.out.println("Total Nodes = " + p1.intCountNode());
     }
 }
